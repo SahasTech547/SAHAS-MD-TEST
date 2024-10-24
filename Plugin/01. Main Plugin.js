@@ -150,10 +150,10 @@ cmd({
 *│ 𝚈𝙾𝚄𝚃𝚄𝙱𝙴 𝙲𝙷𝙰𝙽𝙽𝙴𝙻:* https://www.youtube.com/@Sahas_Tech
 *╰──────────●●►*
 
-> Platform :  ${os.hostname()}
-> Memory : ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB
-> Runtime : ${runtime(process.uptime())} 
-> Version ; 1.0.0
+> *Platform :*  *${os.hostname()}*
+> *Ram Usage :* *${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB*
+> *Runtime :* *${runtime(process.uptime())}* 
+> *Version :* *1.0.0*
                                                                                                   
 *🐼 Have A Nice Day 🐼*
 
@@ -947,6 +947,8 @@ cmd({
 │◈ ᴠᴇʀꜱɪᴏɴ : 1.0.0
 ╰──────────●●►
 
+*乂 REPLY THE MENU OPTION 乂*  
+
 *╭╼╼╼╼╼╼╼╼╼╼*
 *├ 1 • OWNER*
 *├ 2 • CONVERT*
@@ -960,8 +962,6 @@ cmd({
 *├ 10 • OTHER*
 *├ 11 • NEWS*
 *╰╼╼╼╼╼╼╼╼╼╼*
-
-*乂 REPLY THE MENU OPTION 乂*  
 
 > ©ᴘᴏᴡᴇʀᴇᴅ ʙʏ ꜱᴀʜᴀꜱ ᴛᴇᴄʜ`;
 
@@ -1010,8 +1010,6 @@ cmd({
 *.jid*
 *.gjid*
 *.restart*
-*.setautobio
-*.update*
 
 *╰───────────●●►*
 
@@ -1084,7 +1082,6 @@ cmd({
 *.allmenu*
 *.owner*
 *.repo*
-*.settings*
 
 *╰───────────●●►*
 
