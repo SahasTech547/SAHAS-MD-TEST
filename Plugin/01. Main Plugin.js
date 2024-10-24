@@ -546,10 +546,10 @@ cmd({
 
 
 cmd({
-      pattern: "support",
-      desc: "To get the bot informations.",
+      pattern: "repo",
+      desc: "To get the repo informations.",
       category: "main",
-      react: "⛓",
+      react: "📡",
       filename: __filename
     },
     
