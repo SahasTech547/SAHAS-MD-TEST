@@ -64,7 +64,7 @@ async function connectToWA() {
             }
         } else if (connection === 'open') {
             console.log('✅ SAHAS-MD - Plugin Installing...')
-            console.log('✅ SAHAS-MD - Plugin Install Complated...')
+            console.log('✅ SAHAS-MD - Plugin Install Completed...')
             console.log('✅ SAHAS-MD - SAHAS-MD Sucessfull Conected Your Device...')
             const path = require('path');
             fs.readdirSync("./Plugin/").forEach((plugin) => {
@@ -100,10 +100,6 @@ async function connectToWA() {
         const type = getContentType(mek.message)
         const content = JSON.stringify(mek.message)
         const from = mek.key.remoteJid
-
-        if (isCmd && config.AUTO_READ_CMD === "true") {
-              await conn.readMessages([mek.key])  // Mark command as read
-        }
 
         if (config.ALWAYS_TYPING === "true") {
             await conn.sendPresenceUpdate('composing', from)
