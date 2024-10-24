@@ -44,7 +44,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
           externalAdReply: {
               title: `SAHAS-MD Github Repository Information`,
               body: `Can't Find The Information. You Can Try Another Way. Error Code 4043`,
-              thumbnailUrl: `https://files.catbox.moe/de82e3.jpg`,
+              thumbnailUrl: `https://pomf2.lain.la/f/5fz9fk69.jpg`,
               sourceUrl: ``,
               mediaType: 1,
               renderLargerThumbnail: true
