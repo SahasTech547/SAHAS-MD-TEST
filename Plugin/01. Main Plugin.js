@@ -88,7 +88,7 @@ const mono = "```"
           externalAdReply: {
               title: `SAHAS-MD System Information`,
               body: `Can't Find The Information. You Can Try Another Way. Error Code 4043`,
-              thumbnailUrl: `https://files.catbox.moe/de82e3.jpg`,
+              thumbnailUrl: `https://pomf2.lain.la/f/5fz9fk69.jpg`,
               sourceUrl: ``,
               mediaType: 1,
               renderLargerThumbnail: true
@@ -201,8 +201,10 @@ cmd({
       category: "main",
       react: "🧚🏻‍♀️",
       filename: __filename
-    }, async (conn, mek, m, { from, reply }) => {
-      try {
+    },
+    
+    async(conn, mek, m,{from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
+    try{
           const senderNumber = m.sender;
           const isGroup = m.isGroup || false;
 
@@ -233,9 +235,9 @@ cmd({
           // Status message to be sent
 
 
-          let desc = `*乂 👋 HEY I'AM ALIVE NOW*
+          let desc = `*👋 Hello ${pushname}*
 
-𝖳𝗒𝗉𝖾 .𝗆𝖾𝗇𝗎 𝖦𝖾𝗍 𝖬𝗒 𝖢𝗈𝗆𝗆𝖺𝗇𝖽 𝖫𝗂𝗌𝗍. 𝘚𝘈𝘏𝘈𝘚 𝖬𝖣 𝗂𝗌 𝖺 𝖲𝗂𝗆𝗉𝗅𝗒 𝖵𝖾𝗋𝗒 𝖯𝗈𝗐𝖾𝗋𝖿𝗎𝗅𝗅 𝖶𝗁𝗍𝗌𝖺𝗉𝗉 𝖡𝗈𝗍. 𝖡𝖺𝗌𝖾 𝖱𝗎𝗇𝗂𝗇𝗀 𝖮𝗇 𝖡𝖺𝗅𝗂𝖾𝗒𝗌 𝖠𝗇𝖽 𝖵𝖺𝗋𝗂𝗈𝗎𝗌 𝖠𝖯𝖨𝗌. 𝖨𝗍 𝖮𝖿𝖿𝖾𝗋  𝖲𝖾𝖺𝗆𝗅𝖾𝗌𝗌 𝖥𝗎𝗇𝖼𝗍𝗂𝗈𝗇𝖺𝗅𝗂𝗍𝗒 𝖶𝗂𝗍𝗁𝗈𝗎𝗍 𝖡𝗎𝗍𝗍𝗈𝗇𝗌. 𝖣𝖾𝗅𝗂𝗏𝖾𝗋𝗂𝗇𝗀 𝖰𝗎𝗂𝖼𝗄 𝖠𝗇𝖽 𝖤𝖿𝖿𝗂𝖼𝗂𝖾𝗇𝗍 𝖯𝖾𝗋𝖿𝗈𝗋𝗆𝖺𝗇𝖼𝖾 𝖥𝗈𝗋 𝖠𝗎𝗍𝗈𝗆𝖺𝗍𝖾𝖽 𝖳𝖺𝗌𝗄𝗌 𝖠𝗇𝖽 𝖢𝗈𝗆𝗆𝖺𝗇𝖽𝗌. 𝖭𝗈𝗐 𝖸𝗈𝗎 𝖢𝖺𝗇 𝖦𝖾𝗍 𝖬𝗒 𝖲𝗒𝗌𝗍𝖾𝗆 𝖨𝗇𝖿𝗈𝗋𝗆𝖺𝗍𝗂𝗈𝗇 𝖳𝗒𝗉𝖾 .𝗌𝗒𝗌𝗍𝖾𝗆 𝖠𝗇𝖽 𝖲𝖾𝗇𝖽 𝖨𝗍. 
+𝖳𝗒𝗉𝖾 .𝗆𝖾𝗇𝗎 𝖦𝖾𝗍 𝖬𝗒 𝖢𝗈𝗆𝗆𝖺𝗇𝖽 𝖫𝗂𝗌𝗍. 𝖲𝖠𝘏𝖠𝖲 𝖬𝖣 𝗂𝗌 𝖺 𝖲𝗂𝗆𝗉𝗅𝗒 𝖵𝖾𝗋𝗒 𝖯𝗈𝗐𝖾𝗋𝖿𝗎𝗅𝗅 𝖶𝗁𝗍𝗌𝖺𝗉𝗉 𝖡𝗈𝗍. 𝖡𝖺𝗌𝖾 𝖱𝗎𝗇𝗂𝗇𝗀 𝖮𝗇 𝖡𝖺𝗅𝗂𝖾𝗒𝗌 𝖠𝗇𝖽 𝖵𝖺𝗋𝗂𝗈𝗎𝗌 𝖠𝖯𝖨𝗌. 𝖨𝗍 𝖮𝖿𝖿𝖾𝗋  𝖲𝖾𝖺𝗆𝗅𝖾𝗌𝗌 𝖥𝗎𝗇𝖼𝗍𝗂𝗈𝗇𝖺𝗅𝗂𝗍𝗒 𝖶𝗂𝗍𝗁𝗈𝗎𝗍 𝖡𝗎𝗍𝗍𝗈𝗇𝗌. 𝖣𝖾𝗅𝗂𝗏𝖾𝗋𝗂𝗇𝗀 𝖰𝗎𝗂𝖼𝗄 𝖠𝗇𝖽 𝖤𝖿𝖿𝗂𝖼𝗂𝖾𝗇𝗍 𝖯𝖾𝗋𝖿𝗈𝗋𝗆𝖺𝗇𝖼𝖾 𝖥𝗈𝗋 𝖠𝗎𝗍𝗈𝗆𝖺𝗍𝖾𝖽 𝖳𝖺𝗌𝗄𝗌 𝖠𝗇𝖽 𝖢𝗈𝗆𝗆𝖺𝗇𝖽𝗌. 𝖭𝗈𝗐 𝖸𝗈𝗎 𝖢𝖺𝗇 𝖦𝖾𝗍 𝖬𝗒 𝖲𝗒𝗌𝗍𝖾𝗆 𝖨𝗇𝖿𝗈𝗋𝗆𝖺𝗍𝗂𝗈𝗇 𝖳𝗒𝗉𝖾 .𝗌𝗒𝗌𝗍𝖾𝗆 𝖠𝗇𝖽 𝖲𝖾𝗇𝖽 𝖨𝗍. 
 
 > *©ᴘᴏᴡᴇʀᴇᴅ ʙʏ ꜱᴀʜᴀꜱ ᴛᴇᴄʜ*`
 
@@ -296,8 +298,11 @@ cmd({
       category: "main",
       react: "📁",
       filename: __filename
-    }, async (conn, mek, m, { from, reply }) => {
-      try {
+},
+    
+    async(conn, mek, m,{from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
+    try{
+   
           const senderNumber = m.sender;
           const isGroup = m.isGroup || false;
 
@@ -328,7 +333,9 @@ cmd({
           // Status message to be sent
 
 
-          let desc = `✨ 𝗪𝗲𝗹𝗰𝗼𝗺𝗲 𝘁𝗼 𝐒𝐀𝐇𝐀𝐒 𝐌𝐃! ✨ 
+          let desc = `*👋 Hello ${pushname}*
+          
+✨ 𝗪𝗲𝗹𝗰𝗼𝗺𝗲 𝘁𝗼 𝐒𝐀𝐇𝐀𝐒 𝐌𝐃! ✨ 
 ╭─「 ᴄᴏᴍᴍᴀɴᴅꜱ ᴘᴀɴᴇʟ」
 │◈ 𝖱𝗎𝗇𝗍𝗂𝗆𝖾 : ${uptime}
 │◈ 𝖮𝗐𝗇𝖾𝗋 𝖭𝖺𝗆𝖾 :  𝐒𝐀𝐇𝐀𝐒 𝐍𝐄𝐓𝐇𝐒𝐀𝐑𝐀
@@ -605,7 +612,7 @@ cmd({
           externalAdReply: {
               title: `SAHAS-MD Owner Information`,
               body: `Can't Find The Information. You Can Try Another Way. Error Code 4043`,
-              thumbnailUrl: `https://files.catbox.moe/de82e3.jpg`,
+              thumbnailUrl: `https://pomf2.lain.la/f/5fz9fk69.jpg`,
               sourceUrl: ``,
               mediaType: 1,
               renderLargerThumbnail: true
