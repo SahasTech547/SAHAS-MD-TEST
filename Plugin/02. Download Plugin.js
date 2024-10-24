@@ -566,7 +566,7 @@ cmd(
                                     externalAdReply: {
                                           title: `SAHAS-MD FB Downloader`,
                                           body: `Undifended : Powerd By SAHAS-MD FB Information Search Engine`,
-                                          thumbnailUrl: `https://ibb.co/xjtnmtF`,
+                                          thumbnailUrl: `https://pomf2.lain.la/f/9ggi67rj.jpg`,
                                           sourceUrl:  ``,
                                           mediaType: 1,
                                           renderLargerThumbnail: true
@@ -728,7 +728,7 @@ cmd({
                         externalAdReply: {
                               title: `SAHAS-MD Tik Tok Downloader`,
                               body: `Undifended : Powerd By SAHAS-MD Tiktok Information Search Engine`,
-                              thumbnailUrl: `https://ibb.co/m6Gcs1S`,
+                              thumbnailUrl: `https://pomf2.lain.la/f/eo16q3mu.png`,
                               sourceUrl:  ``,
                               mediaType: 1,
                               renderLargerThumbnail: true
@@ -846,7 +846,7 @@ cmd({
                                                               externalAdReply: {
                                                                   title: `SAHAS-MD Gdrive Downloader`,
                                                                   body: `${fileInfo.fileName || fileInfo.title || `Undifended`} : Powerd By SAHAS-MD Gdrive Information Search Engine`,
-                                                                  thumbnailUrl: `https://ibb.co/t4QLn7h`,
+                                                                  thumbnailUrl: `https://pomf2.lain.la/f/41i00kdh.png`,
                                                                   sourceUrl: ``,
                                                                   mediaType: 1,
                                                                   renderLargerThumbnail: true, 
