@@ -51,7 +51,7 @@ async (conn, mek, m, { from, args, reply }) => {
           externalAdReply: {
               title: `SAHAS-MD Youtube Information`,
               body: `Can't Find The Information. You Can Try Another Way. Error Code 4043`,
-              thumbnailUrl: `https://ibb.co/CWHhNzd`,
+              thumbnailUrl: `https://pomf2.lain.la/f/gmsubn6.png`,
               sourceUrl: ``,
               mediaType: 1,
               renderLargerThumbnail: true
