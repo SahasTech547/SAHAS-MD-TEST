@@ -38,7 +38,29 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
 
 > ©ᴘᴏᴡᴇʀᴇᴅ ʙʏ ꜱᴀʜᴀꜱ ᴛᴇᴄʜ`;
 
-        const vv = await conn.sendMessage(from, { image: { url: "https://files.catbox.moe/de82e3.jpg"}, caption: desc }, { quoted: mek });
+          // Sending the image with caption
+          const sentMsg = await conn.sendMessage(from, {
+
+
+          text: desc,
+          contextInfo: {
+
+          forwardingScore: 999,
+          isForwarded: true,
+          forwardedNewsletterMessageInfo: {
+          newsletterName: '👾 ＳＡＨＡＳ  |   𝚃𝙴𝙲𝙷 ジ',
+          newsletterJid: "120363296605464049@newsletter",
+          },
+          externalAdReply: {
+              title: `SAHAS-MD Menu List`,
+              body: `Can't Find The Information. You Can Try Another Way. Error Code 4043`,
+              thumbnailUrl: `https://pomf2.lain.la/f/5fz9fk69.jpg`,
+              sourceUrl: ``,
+              mediaType: 1,
+              renderLargerThumbnail: true
+              }
+                  }
+              }, { quoted: mek });
 
         conn.ev.on('messages.upsert', async (msgUpdate) => {
             const msg = msgUpdate.messages[0];
