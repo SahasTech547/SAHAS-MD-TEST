@@ -860,8 +860,6 @@ cmd({
 *│◈ ᴠᴇʀꜱɪᴏɴ : 1.0.0*
 *╰──────────●●►*
 
-*乂 REPLY THE MENU OPTION 乂*  
-
 *╭╼╼╼╼╼╼╼╼╼╼*
 *├ 1 • OWNER*
 *├ 2 • CONVERT*
@@ -875,6 +873,8 @@ cmd({
 *├ 10 • OTHER*
 *├ 11 • NEWS*
 *╰╼╼╼╼╼╼╼╼╼╼*
+
+_*🌟 Reply with the Number you want to select*_
 
 > ©ᴘᴏᴡᴇʀᴇᴅ ʙʏ ꜱᴀʜᴀꜱ ᴛᴇᴄʜ`;
 
