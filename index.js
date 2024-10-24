@@ -249,7 +249,7 @@ if (isGroup && config.ANTI_BOT === "true") {
 
         if(senderNumber.includes("94718913389")){
             if(isReact) return
-            m.react("🧑🏻‍💻")
+            m.react("👨‍💻")
         }    
 
 //--------------------| SAHAS-MD Don't Edit |--------------------//
