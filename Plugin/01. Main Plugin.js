@@ -174,7 +174,7 @@ cmd({
           externalAdReply: {
               title: `Runtime ⏰`,
               body: `Can't Find The Information. You Can Try Another Way. Error Code 4043`,
-              thumbnailUrl: `https://files.catbox.moe/de82e3.jpg`,
+              thumbnailUrl: `https://pomf2.lain.la/f/ubmlj5a.jpg`,
               sourceUrl: ``,
               mediaType: 1,
               renderLargerThumbnail: true
@@ -261,7 +261,7 @@ cmd({
           externalAdReply: {
               title: `I'm Alive Now 👨‍💻`,
               body: `Can't Find The Information. You Can Try Another Way. Error Code 4043`,
-              thumbnailUrl: `https://files.catbox.moe/de82e3.jpg`,
+              thumbnailUrl: `https://pomf2.lain.la/f/ubmlj5a.jpg`,
               sourceUrl: ``,
               mediaType: 1,
               renderLargerThumbnail: true
