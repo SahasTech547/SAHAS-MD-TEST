@@ -1,10 +1,10 @@
 const config = require('../config');
 const { cmd, commands } = require('../command');
 const fetch = require('node-fetch');
-const {fetchJson} = require('../lib/functions');
+const {fetchJson} = require('../DATABASE/functions');
 const axios = require('axios');
 const cheerio = require("cheerio");
-const scraper = require("../lib/scraper");
+const scraper = require("../DATABASE/scraper");
 const emailDataStore = {};
 
 //-----------------------------------------------Calculator-----------------------------------------------
