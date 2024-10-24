@@ -886,8 +886,8 @@ cmd({
 
 
 cmd({
-      pattern: "menu",
-      alias: ["panel"],
+      pattern: "allmenu",
+      alias: ["list"],
       desc: "Get Bot Menu",
       category: "main",
       react: "📁",
