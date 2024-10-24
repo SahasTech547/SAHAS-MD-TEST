@@ -40,29 +40,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
 > *©ᴘᴏᴡᴇʀᴇᴅ ʙʏ ꜱᴀʜᴀꜱ ᴛᴇᴄʜ*
         `;
 
-          // Sending the image with caption
-          const sentMsg = await conn.sendMessage(from, {
-
-
-          text: conversionInfo,
-          contextInfo: {
-
-          forwardingScore: 999,
-          isForwarded: true,
-          forwardedNewsletterMessageInfo: {
-          newsletterName: '👾 ＳＡＨＡＳ  |   𝚃𝙴𝙲𝙷 ジ',
-          newsletterJid: "120363296605464049@newsletter",
-          },
-          externalAdReply: {
-              title: `SAHAS-MD Convert Information`,
-              body: `Can't Find The Information. You Can Try Another Way. Error Code 4043`,
-              thumbnailUrl: `https://files.catbox.moe/de82e3.jpg`,
-              sourceUrl: ``,
-              mediaType: 1,
-              renderLargerThumbnail: true
-              }
-                  }
-              }, { quoted: mek });
+        await conn.sendMessage(from, { text: conversionInfo }, { quoted: mek });
     } catch (e) {
         console.log(e);
         reply(`*Error Fetching Data*: ${e.message}`);
