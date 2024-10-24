@@ -101,6 +101,9 @@ async function connectToWA() {
         const content = JSON.stringify(mek.message)
         const from = mek.key.remoteJid
 
+        if (isCmd && config.AUTO_READ_CMD === "true") {
+              await conn.readMessages([mek.key])  // Mark command as read
+        }
 
         if (config.ALWAYS_TYPING === "true") {
             await conn.sendPresenceUpdate('composing', from)
