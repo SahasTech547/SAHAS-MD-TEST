@@ -243,170 +243,172 @@ cmd({
           let desc = `*👋 Hello ${pushname}*
           
 ✨ 𝗪𝗲𝗹𝗰𝗼𝗺𝗲 𝘁𝗼 𝐒𝐀𝐇𝐀𝐒 𝐌𝐃! ✨ 
-╭─「 ᴄᴏᴍᴍᴀɴᴅꜱ ᴘᴀɴᴇʟ」
-│◈ 𝖱𝗎𝗇𝗍𝗂𝗆𝖾 : ${uptime}
-│◈ 𝖮𝗐𝗇𝖾𝗋 𝖭𝖺𝗆𝖾 :  𝐒𝐀𝐇𝐀𝐒 𝐍𝐄𝐓𝐇𝐒𝐀𝐑𝐀
-│◈ 𝖮𝗐𝗇𝖾𝗋 𝖭𝗎𝗆𝖻𝖾𝗋 : 94718913389
-╰──────────●●►
-╭──────────●●►
+*╭─「 ᴄᴏᴍᴍᴀɴᴅꜱ ᴘᴀɴᴇʟ」*
+*│◈ 𝖱𝗎𝗇𝗍𝗂𝗆𝖾 : ${uptime}*
+*│◈ 𝖱𝖺𝗆 𝖴𝗌𝖺𝗀𝖾 : ${memoryUsage} MB / ${totalMemory} MB*
+*│◈ 𝖯𝗅𝖺𝗍𝖿𝗈𝗋𝗆 : ${os.hostname()}*
+*│◈ 𝖮𝗐𝗇𝖾𝗋 𝖭𝖺𝗆𝖾 : 𝐒𝐀𝐇𝐀𝐒 𝐍𝐄𝐓𝐇𝐒𝐀𝐑𝐀*
+*│◈ 𝖮𝗐𝗇𝖾𝗋 𝖭𝗎𝗆𝖻𝖾𝗋 : 94718913389*
+*╰──────────●●►*
+*╭──────────●●►*
  📥 *𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝 𝐌𝐞𝐧𝐮*
-  ───────
- .apk
-.twitter
-.gdrive
-.mediafire
-.fb
-.img
-.play
-.song
-.video
-.tiktok
-.xvideo
-.xnxx
-.mvdl or cinerurl
+  *───────*
+*.apk*
+*.twitter*
+*.gdrive*
+*.mediafire*
+*.fb*
+*.img*
+*.play*
+*.song*
+*.video*
+*.tiktok*
+*.xvideo*
+*.xnxx*
+*.mvdl or cinerurl*
 
-╰───────────●●►
-╭──────────●●►
+*╰───────────●●►*
+*╭──────────●●►*
  👾 *𝐀𝐢 𝐌𝐞𝐧𝐮*
-  ───────
- .ai
+  *───────*
+*.ai*
 
-╰───────────●●►
-╭──────────●●►
+*╰───────────●●►*
+*╭──────────●●►*
  🔧 *𝐌𝐚𝐢𝐧 𝐌𝐞𝐧𝐮*
-  ───────
- .alive
-.menu
-.system
-.ping
-.runtime
-.about
-.support
-.allmenu
-.owner
-.repo
-.settings
+  *───────*
+*.alive*
+*.menu*
+*.system*
+*.ping*
+*.runtime*
+*.about*
+*.support*
+*.allmenu*
+*.owner*
+*.repo*
+*.settings*
 
-╰───────────●●►
-╭──────────●●►
+*╰───────────●●►*
+*╭──────────●●►*
  🎉 *𝐅𝐮𝐧 𝐌𝐞𝐧𝐮*
-  ───────
- .animegirl
-.dog
-.fact
-.hack
-.joke
-.quote
+  *───────*
+*.animegirl*
+*.dog*
+*.fact*
+*.hack*
+*.joke*
+*.quote*
 
-╰───────────●●►
-╭──────────●●►
+*╰───────────●●►*
+*╭──────────●●►*
  🔄 *𝐂𝐨𝐧𝐯𝐞𝐫𝐭 𝐌𝐞𝐧𝐮*
-  ───────
-.sticker
-.convert
-.currency
-.url
+  *───────*
+*.sticker*
+*.convert*
+*.currency*
+*.url*
 
-╰───────────●●►
-╭──────────●●►
+*╰───────────●●►*
+*╭──────────●●►*
  🔍 *𝐒𝐞𝐚𝐫𝐜𝐡 𝐌𝐞𝐧𝐮*
-  ───────
- .srepo
-.yts
+  *───────*
+*.srepo*
+*.yts*
 
-╰───────────●●►
-╭──────────●●►
+*╰───────────●●►*
+*╭──────────●●►*
  👥 *𝐆𝐫𝐨𝐮𝐩 𝐌𝐞𝐧𝐮*
-  ───────
- .mute
-.unmute
-.promote
-.demote
-.del
-.add
-.setgoodbye
-.setwelcome
-.admins
-.groupdesc
-.groupinfo
-.grouplink
-.gname
-.setsubject
-.tagall
-.requests
-.accept
-.reject
-.hidetag
-.kick
-.unlock
-.lock
-.approve
-.poll
-.getpic
+  *───────*
+*.mute*
+*.unmute*
+*.promote*
+*.demote*
+*.del*
+*.add*
+*.setgoodbye*
+*.setwelcome*
+*.admins*
+*.groupdesc*
+*.groupinfo*
+*.grouplink*
+*.gname*
+*.setsubject*
+*.tagall*
+*.requests*
+*.accept*
+*.reject*
+*.hidetag*
+*.kick*
+*.unlock*
+*.lock*
+*.approve*
+*.poll*
+*.getpic*
 
-╰───────────●●►
-╭──────────●●►
+*╰───────────●●►*
+*╭──────────●●►*
  🔒 *𝐎𝐰𝐧𝐞𝐫 𝐌𝐞𝐧𝐮*
-  ───────
- .shutdown
-.broadcast
-.setpp
-.block
-.unblock
-.clearchats
-.jid
-.gjid
-.restart
-.setautobio
-.update
+  *───────*
+*.shutdown*
+*.broadcast*
+*.setpp*
+*.block*
+*.unblock*
+*.clearchats*
+*.jid*
+*.gjid*
+*.restart*
+*.setautobio
+*.update*
 
-╰───────────●●►
-╭──────────●●►
+*╰───────────●●►*
+*╭──────────●●►*
  ⚙️ *𝐎𝐭𝐡𝐞𝐫 𝐌𝐞𝐧𝐮*
-  ───────
-.movie
-.anime1
-.anime2
-.anime3
-.anime4
-.anime5
-.define
-.githubstalk
-.gpass
-.trt
-.weather
+  *───────
+*.movie*
+*.anime1*
+*.anime2*
+*.anime3*
+*.anime4*
+*.anime5*
+*.define*
+*.githubstalk*
+*.gpass*
+*.trt*
+*.weather*
 
-╰───────────●●►
-╭──────────●●►
+*╰───────────●●►*
+*╭──────────●●►*
  🛠️ *𝐓𝐨𝐨𝐥𝐬 𝐌𝐞𝐧𝐮*
-  ───────
- .calc
-.translate
-.reverse
-.tempmail
-.checkmail
-.delmail
-.encode
-.decode
-.npmstalk
-.iplookup
-.instastalk
-.githubuser
-.password
-.hijact
+  *───────*
+*.calc*
+*.translate*
+*.reverse*
+*.tempmail*
+*.checkmail*
+*.delmail*
+*.encode*
+*.decode*
+*.npmstalk*
+*.iplookup*
+*.instastalk*
+*.githubuser*
+*.password*
+*.hijact*
 
-╰───────────●●►
-╭──────────●●►
+*╰───────────●●►*
+*╭──────────●●►*
  📰 *𝐍𝐞𝐰𝐬 𝐌𝐞𝐧𝐮*
-  ───────
- .hirunews
-.sirasanews
-.derananews
-.news
-.lankadeepanews
-.bbcnews
+  *───────*
+*.hirunews*
+*.sirasanews*
+*.derananews*
+*.news*
+*.lankadeepanews*
+*.bbcnews*
 
-╰───────────●●►
+*╰───────────●●►*
 
 
 > *©ᴘᴏᴡᴇʀᴇᴅ ʙʏ ꜱᴀʜᴀꜱ ᴛᴇᴄʜ*`
