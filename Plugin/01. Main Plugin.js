@@ -19,100 +19,7 @@ const mono = "```"
     }
     const platformName = detectPlatform();
 
-    cmd({
-      pattern: "system",
-      alias: ["status", "botinfo"],
-      desc: "Check uptime, RAM usage, CPU info, and more",
-      category: "main",
-      react: "🧬",
-      filename: __filename
-    }, async (conn, mek, m, { from, reply }) => {
-      try {
-          const senderNumber = m.sender;
-          const isGroup = m.isGroup || false;
-
-          // Check access permissions
-          if (!checkAccess(senderNumber, isGroup)) {
-              if (blacklistedJIDs.includes(senderNumber)) {
-                  return reply("*🚫 You are blacklisted. Access denied.*");
-              } else {
-                  return reply("*😢 Access denied. You don't have permission to use this command.🎁 Change Bot Mode!*");
-              }
-          }
-
-          // System and memory information
-          const uptime = runtime(process.uptime());
-          const memoryUsage = (process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2);
-          const totalMemory = Math.round(os.totalmem() / 1024 / 1024);
-          const cpuArch = os.arch();
-          const cpuCores = os.cpus().length;
-          const systemType = os.type();
-          const freeMemory = (os.freemem() / 1024 / 1024).toFixed(2);
-
-          // Custom message for Render platform
-          let platformMessage = '';
-          if (platformName === 'Render') {
-              platformMessage = '\n🌟 You are currently hosting on Render! Enjoy seamless deployments.';
-          }
-
-          // Status message to be sent
-        
-          
-          let desc = `*乂 SAHAS-MD SYSTEM INFORMATION*
-
-*⏰ 𝖴𝗉𝗍𝗂𝗆𝖾 :* ${uptime}
-*📻 𝖯𝗅𝖺𝗍𝖿𝗈𝗋𝗆 :* ${platformName}
-*⚙️ 𝖱𝖺𝗆 𝖴𝗌𝖺𝗀𝖾 :* ${memoryUsage} MB / ${totalMemory} MB
-*👨‍💻 𝖮𝗐𝗇𝖾𝗋 :* Sahas Tech 
-*🤖 𝖵𝖾𝗋𝗌𝗂𝗈𝗇 :* 1.0.0
-‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎
-> *©ᴘᴏᴡᴇʀᴇᴅ ʙʏ ꜱᴀʜᴀꜱ ᴛᴇᴄʜ*`
-
-       
-
-          
-
-          // Sending the image with caption
-          const sentMsg = await conn.sendMessage(from, {
-
-
-          text: desc,
-          contextInfo: {
-
-          forwardingScore: 999,
-          isForwarded: true,
-          forwardedNewsletterMessageInfo: {
-          newsletterName: '👾 ＳＡＨＡＳ  |   𝚃𝙴𝙲𝙷 ジ',
-          newsletterJid: "120363296605464049@newsletter",
-          },
-          externalAdReply: {
-              title: `SAHAS-MD System Information`,
-              body: `Can't Find The Information. You Can Try Another Way. Error Code 4043`,
-              thumbnailUrl: `https://pomf2.lain.la/f/5fz9fk69.jpg`,
-              sourceUrl: ``,
-              mediaType: 1,
-              renderLargerThumbnail: true
-              }
-                  }
-              }, { quoted: mek });
-
-      } catch (e) {
-          console.error(e);
-          reply(`*Error:* ${e.message}`);
-      }
-    });
-
-
-
-
-
-
-
-
-
-
-
-
+    
 
 cmd({
       pattern: "runtime",
@@ -893,7 +800,8 @@ cmd({
 
 
 cmd({
-      pattern: "infobot",
+      pattern: "system",
+      alias: ["status", "botinfo"],
       desc: "Check uptime, RAM usage, CPU info, and more",
       category: "main",
       react: "🧬",
@@ -932,13 +840,11 @@ cmd({
           
           let desc = `*乂 SAHAS-MD SYSTEM INFORMATION*
 
-┌────────────────────
-    ├ ⏰Runtime:-  ${runtime(process.uptime())}    
-    ├ 📟Ram usage:- ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB
-    ├ ⚙️Platform:- ${os.hostname()}
-    ├ 👨‍💻Owner:- Sahas Nethsara   
-    ├ 👾Version:- 1.0.0
-    └───────────────────────
+    *├ ⏰𝖱𝗎𝗇𝗍𝗂𝗆𝖾:-  ${runtime(process.uptime())}*    
+    *├ 📟𝖱𝖺𝗆 𝖴𝗌𝖺𝗀𝖾:- ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB*
+    *├ ⚙️𝖯𝗅𝖺𝗍𝖿𝗈𝗋𝗆:- ${os.hostname()}*
+    *├ 👨‍💻𝖮𝗐𝗇𝖾𝗋:- 𝖲𝖺𝗁𝖺𝗌 𝖭𝖾𝗍𝗁𝗌𝖺𝗋𝖺*   
+    *├ 👾𝖵𝖾𝗋𝗌𝗂𝗈𝗇:- 1.0.0*
 ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎
 > *©ᴘᴏᴡᴇʀᴇᴅ ʙʏ ꜱᴀʜᴀꜱ ᴛᴇᴄʜ*`
 
