@@ -619,7 +619,7 @@ cmd({
           newsletterJid: "120363296605464049@newsletter",
           },
           externalAdReply: {
-              title: `SAHAS-MD Support Channels`,
+              title: `SAHAS-MD Repo Informations`,
               body: `Can't Find The Information. You Can Try Another Way. Error Code 4043`,
               thumbnailUrl: `https://pomf2.lain.la/f/5fz9fk69.jpg`,
               sourceUrl: ``,
