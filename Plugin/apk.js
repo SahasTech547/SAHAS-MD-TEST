@@ -20,7 +20,7 @@ async (conn, mek, m, { from, quoted, body, q, reply }) => {
     const appId = q.trim();
     if (!appId) return reply(`Please provide an app name`);
     
-    reply(".apkdl " + appId + ");
+    reply("_Downloading " + appId + "_");
     
     try {
         const appInfo = await scraper.aptoideDl(appId);
@@ -32,7 +32,7 @@ async (conn, mek, m, { from, quoted, body, q, reply }) => {
         
         await conn.sendMessage(
             from,
-            { document: buff, caption: `> *ꜱᴀʜᴀꜱ-ᴍᴅ • ᴍᴜʟᴛɪ ᴅᴇᴠɪᴄᴇ-ᴡᴀ-ʙᴏᴛ ㋛*`, mimetype: "application/vnd.android.package-archive", filename: `${appInfo.appname}.apk` },
+            { document: buff, caption: `> *©ᴘᴏᴡᴇʀᴇᴅ ʙʏ ꜱᴀʜᴀꜱ ᴛᴇᴄʜ*`, mimetype: "application/vnd.android.package-archive", filename: `${appInfo.appname}.apk` },
             { quoted: mek }
         );
         
