@@ -34,7 +34,7 @@ async (conn, mek, m, { from, quoted, body, q, reply }) => {
     if (!appId) return reply(`Please provide an app name`);
 
     
-    reply("_Downloading " + appId + "_");
+    reply("_Downloading "${apkName}"_");
     
     try {
         const apkData = data.data;
@@ -51,7 +51,7 @@ async (conn, mek, m, { from, quoted, body, q, reply }) => {
         
         await conn.sendMessage(
             from,
-            { document: buff, caption: `> *ꜱᴀʜᴀꜱ-ᴍᴅ • ᴍᴜʟᴛɪ ᴅᴇᴠɪᴄᴇ-ᴡᴀ-ʙᴏᴛ ㋛*`, mimetype: "application/vnd.android.package-archive", filename: `${appInfo.appname}.apk` },
+            { document: buff, caption: `> *ꜱᴀʜᴀꜱ-ᴍᴅ • ᴍᴜʟᴛɪ ᴅᴇᴠɪᴄᴇ-ᴡᴀ-ʙᴏᴛ ㋛*`, mimetype: "application/vnd.android.package-archive", filename: `${apkName}.apk` },
             { quoted: mek }
         );
         
