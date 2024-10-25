@@ -44,6 +44,13 @@ const port = process.env.PORT || 8000;
 async function connectToWA() {
     console.log(asciiArt);
     console.log("✅ SAHAS-MD - Session Download Complated...");
+//===================Mongodb==========================
+
+const connectDB = require('./DATABASE/mongodb')
+connectDB();
+const {readEnv} = require('./DATABASE/database')
+const config = await readEnv()
+const prefix = config.PREFIX
     const { state, saveCreds } = await useMultiFileAuthState(__dirname + '/Session/')
     var { version } = await fetchLatestBaileysVersion()
 
