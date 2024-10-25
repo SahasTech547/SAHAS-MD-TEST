@@ -1022,7 +1022,14 @@ async (conn, mek, m, { from, reply, q, pushname }) => {
             responseType: 'stream'
         });
 
-        
+        const writer = fs.createWriteStream(filePath);
+
+        apkResponse.data.pipe(writer);
+
+        writer.on('error', (err) => {
+            console.error(`File write error: ${err.message}`);
+            reply(`Error: ${err.message}`);
+        });
 
         await new Promise((resolve, reject) => {
             writer.on('finish', resolve);
