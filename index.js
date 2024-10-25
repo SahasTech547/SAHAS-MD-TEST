@@ -18,7 +18,6 @@ const util = require('util')
 const { sms, downloadMediaMessage } = require('./DATABASE/msg')
 const axios = require('axios')
 const { File } = require('megajs')
-const prefix = config.PREFIX 
 const path = require('path');
 const asciiArt = ``;
 const ownerNumber = ['94718913389']
