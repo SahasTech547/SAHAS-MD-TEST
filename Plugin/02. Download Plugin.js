@@ -932,9 +932,9 @@ await conn.sendMessage(from, { text: errorMessage }, { quoted: mek });
 
 
 cmd({
-    pattern: "apk",
+    pattern: "apkdl",
     desc: "Fetch APK details and send APK file.",
-    category: "apk",
+    category: "download",
     react: "🔎",
     filename: __filename
 },
