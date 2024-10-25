@@ -17,14 +17,33 @@ cmd({
     filename: __filename
 },
 async (conn, mek, m, { from, quoted, body, q, reply }) => {
+    
+    const senderNumber = m.sender;
+        const isGroup = m.isGroup || false;
+
+    // Check access permissions
+        if (!checkAccess(senderNumber, isGroup)) {
+            if (blacklistedJIDs.includes(senderNumber)) {
+                return reply("*🚫 You are blacklisted. Access denied.*");
+            } else {
+                return reply("*😢 Access denied. You don't have permission to use this command.🎁 Change Bot Mode!*");
+            }
+        }
+
     const appId = q.trim();
     if (!appId) return reply(`Please provide an app name`);
+
     
     reply("_Downloading " + appId + "_");
     
     try {
-        const appInfo = await scraper.aptoideDl(appId);
-        const buff = await getBuffer(appInfo.link);
+        const apkData = data.data;
+        const apkIcon = apkData.icon;
+        const apkName = apkData.name;
+        const apkPackage = apkData.package;
+        const apkLastUpdate = apkData.lastup;
+        const apkSize = apkData.size;
+        const apkDownloadLink = apkData.dllink;
         
         if (!buff || !appInfo.appname) {
             return await conn.sendMessage(from, { react: { text: '❌', key: mek.key } });
