@@ -18,6 +18,7 @@ const util = require('util')
 const { sms, downloadMediaMessage } = require('./DATABASE/msg')
 const axios = require('axios')
 const { File } = require('megajs')
+const prefix = config.PREFIX 
 const path = require('path');
 const asciiArt = ``;
 const ownerNumber = ['94718913389']
@@ -42,14 +43,7 @@ const port = process.env.PORT || 8000;
 
 async function connectToWA() {
     console.log(asciiArt);
-    console.log("✅ SAHAS-MD - Session Download Complated...");
-//===================Mongodb==========================
-
-const connectDB = require('./DATABASE/mongodb')
-connectDB();
-const {readEnv} = require('./DATABASE/database')
-const config = await readEnv()
-const prefix = config.PREFIX
+    console.log("✅ SAHAS-MD - Session Download Completed...");
     const { state, saveCreds } = await useMultiFileAuthState(__dirname + '/Session/')
     var { version } = await fetchLatestBaileysVersion()
 
@@ -106,6 +100,7 @@ const prefix = config.PREFIX
         const type = getContentType(mek.message)
         const content = JSON.stringify(mek.message)
         const from = mek.key.remoteJid
+
 
         if (config.ALWAYS_TYPING === "true") {
             await conn.sendPresenceUpdate('composing', from)
